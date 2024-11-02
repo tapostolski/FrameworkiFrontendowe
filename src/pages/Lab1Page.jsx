@@ -7,7 +7,7 @@ function Lab1Page(){
         <>
         <h1>Laboratorium 1</h1>
             <ul>
-                {data.map((o, i) => <NameItem name={o.name} id={o.id}/>)}
+                {data.map((o) => <NameItem  id={o.id} name={o.name}/>)}
             </ul>
         </>
     );

@@ -2,14 +2,14 @@ const fs = require('fs');
 
 const count = Number(process.argv[2]); // odczyt liczby obiektów
 let names = [];                        // tablica z obiektami 
-
+//losowanie daty urodzenia oczu
 const getRandomBirthDate = () => {
     const startDate = new Date(1995, 1, 1);
     const endDate = new Date(2005, 1, 1);
     const date = new Date(startDate.getTime() + Math.random() * (endDate - startDate));
     return date.toISOString().split('T')[0];
 }
-//losowanie koloeu oczu
+//losowanie koloru oczu
 const getRandomEyeColour = () => {
     const colours = ['brown', 'blue', 'green'];
     return colours[Math.floor(Math.random() * colours.length)];
