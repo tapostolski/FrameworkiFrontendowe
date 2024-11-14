@@ -4,8 +4,8 @@ import {data} from '../data/module-data'
 function Lab2Page(){
     const { id } = useParams();
     return (  <>
-        <h1>Szukane imię</h1>
-        <p>{data.at(id) ? data.at(id).name : <span>Brak identyfikatora osoby. Nie znaleziono osoby o tym identyfikatorze.</span>}</p>
+        <h1>Szukana osoba</h1>
+        <p>{data.at(id) ? <p> Id: {data.at(id).id} <br/> Name: {data.at(id).name} <br/> Eye colour: {data.at(id).eyes} <br/> Birth date: {data.at(id).birth} </p>: <span>Brak identyfikatora osoby. Nie znaleziono osoby o tym identyfikatorze.</span>}</p>
     </>);
 }
 

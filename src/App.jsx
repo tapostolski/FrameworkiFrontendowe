@@ -4,10 +4,10 @@ import RootLayout from './layouts/RootLayout.jsx';;
 import {Route, Routes} from 'react-router-dom';
 import PeoplePage from './pages/PeoplePage.jsx';
 import Lab1Page from './pages/Lab1Page.jsx';
+import Lab3Page from './pages/Lab3Page.jsx';
+import Lab2Page from './pages/Lab2Page.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import object from './components/NavBarMenu.jsx';
-import Lab2Page from './pages/Lab2Page.jsx';
-
 
 import PersonProfileGenerator from './components/PersonProfileGenerator.jsx'
 
@@ -23,6 +23,7 @@ function App() {
         <Route path='/lab1' element={<Lab1Page/>}/>
         <Route path='/lab2' element={<main/>}/>
         <Route path='/lab2/:id' element={<Lab2Page/>}/>
+        <Route path='/lab3' element={<Lab3Page/>}/>
         <Route path='/people/:id' element={<PeoplePage/>}/>
         <Route path='/PersonProfileGenerator' element={<PersonProfileGenerator/>}/>
         <Route path='/*' element={<NotFoundPage/>}/>

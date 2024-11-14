@@ -14,6 +14,10 @@ const getRandomEyeColour = () => {
     const colours = ['brown', 'blue', 'green'];
     return colours[Math.floor(Math.random() * colours.length)];
 }
+//losowanie ratingu
+const getRandomRating = () => {
+    return rating = Math.floor(Math.random()*10) + 1
+}
 
 fs.readFile('./names.txt', 'utf8', (err, data) => {
     if (err) {
@@ -34,7 +38,8 @@ fs.readFile('./names.txt', 'utf8', (err, data) => {
             id: i + 1,
             name: name.substring(1, name.length -2),
             birth: getRandomBirthDate(),
-            eyes: getRandomEyeColour()
+            eyes: getRandomEyeColour(),
+            rating: getRandomRating()
         };
         content += ` ${JSON.stringify(person)},\n`;
     }
