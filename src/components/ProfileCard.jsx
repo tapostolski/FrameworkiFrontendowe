@@ -13,8 +13,18 @@ function ProfileCard({name, id, rating, dispatch}) {
                     <RatingBar rate={rating} />
                 </div>
                 <Card.Text>{name}</Card.Text>
-                <Button variant="primary" className="ms-1">
-                    Edit
+                <Button
+                    variant="primary"
+                    onClick={() =>{
+                        dispatch({
+                            type: "edit",
+                            id: id
+                        });
+                        
+                    }
+                }    
+                className="ms-1">
+                Edit
                 </Button>
                 <Button
                     variant="danger"
